@@ -58,5 +58,6 @@ char    *change_str(char *str, char *substr, int len_substr, char *change)
         return (0);
     }
     free(begin);
+    free(end);
     return (new);
 }

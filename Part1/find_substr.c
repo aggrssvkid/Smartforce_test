@@ -8,7 +8,6 @@ char    *find_substr(char *str, char *substr)
     char    *hold_pos;
     char    *start;
 
-    printf("In find_substr\n");
     start = substr;
     while (*str != '\n' && *str != '\0')
     {

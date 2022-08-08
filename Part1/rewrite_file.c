@@ -11,7 +11,7 @@ int rewrite_file(t_list **begin, char *fullname, char **argv)
     if ((file = fopen(fullname, "w")) == NULL)
         return (2);
     runner = *begin;
-     while (runner)
+    while (runner)
             {
                 printf("%s", (runner)->str);
                 (runner) = (runner)->next;
@@ -28,7 +28,6 @@ int rewrite_file(t_list **begin, char *fullname, char **argv)
             {
                 helper = new;
                 new = change_str(new, find, strlen(argv[2]), argv[3]);
-                printf("New str:%s\n", new);
                 if (helper != runner->str)
                     free(helper);
                 if (new == 0)
