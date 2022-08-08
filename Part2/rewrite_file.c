@@ -12,12 +12,6 @@ int rewrite_file(t_list **begin, char *fullname, char **argv)
         return (2);
     runner = *begin;
     while (runner)
-            {
-                printf("%s", (runner)->str);
-                (runner) = (runner)->next;
-            }
-    runner = *begin;
-    while (runner)
     {
         if (strcmp(runner->str, argv[2]) == 0)
             fputs(argv[3], file);
