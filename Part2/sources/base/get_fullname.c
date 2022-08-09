@@ -1,4 +1,4 @@
-#include "prog.h"
+#include "../../headers/prog.h"
 
 char    *get_fullname(char *path, char *name)
 {

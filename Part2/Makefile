@@ -1,8 +1,8 @@
-SRCS = $(wildcard *.c)
+SRCS = $(wildcard sources/*/*.c)
 
 OBJS = $(SRCS:%.c=%.o)
 
-HEADER = prog.h
+HEADER = headers/prog.h
 
 NAME = Prog
 

@@ -1,22 +1,21 @@
-#include "prog.h"
+#include "../../headers/prog.h"
 
 char    *str_bigger_then_buff(FILE *file, char *input)
 {
-    char    *output;
-    char    *current;
-    char    *ptr;
+    char    *output; // full version of str
+    char    *current; // sequence of symbols, that we alrdy read
+    char    *ptr; // check what "fgets" return
 
     current = malloc(1);
     if (current == 0)
         return (0);
     *current = '\0';
-    do
+    do // just join current line and characters's sequence recieved fro buffer (while we dont recieve '\n')
     {
         output = strjoin(current, input);
         if (output == 0)
         {
             free(current);
-            printf("Malloc Error!\n");
             return (0);
         }
         free(current);
