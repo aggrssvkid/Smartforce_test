@@ -1,4 +1,4 @@
-#include "prog.h"
+#include "../../headers/prog.h"
 
 static char *get_end(char *substr, int len_substr)
 {
@@ -28,9 +28,9 @@ static char *get_begin(char *str, char *end)
 
 char    *change_str(char *str, char *substr, int len_substr, char *change)
 {
-    char    *begin;
-    char    *end;
-    char    *new;
+    char    *begin; // sequence of str symbols, that we  want to store from the start of str
+    char    *end; // sequence of str symbols, that we  want to store between "subsrt's end" and "str's end"
+    char    *new; // pointer that indicates on changed line
 
     begin = get_begin(str, substr);
     if (begin == 0)
